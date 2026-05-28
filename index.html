@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/html-svgrepo-com.svg"
+    />
+    <title>Informational HTML Webpage</title>
+  </head>
+  <body class="eb-garamond" id="background-color">
+    <div class="main">
+      <h1>Simple Informational HTML Webpage</h1>
+      <hr />
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a class="nav" href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a class="nav" href="#document-structure">Document Structure</a>
+          </li>
+          <li>
+            <a class="nav" href="#semantic-elements">Semantic Elements</a>
+          </li>
+          <li>
+            <a class="nav" href="#attributes-and-links">Attributes & Links</a>
+          </li>
+          <li>
+            <a class="nav" href="#images-and-media">Images & Media</a>
+          </li>
+          <li>
+            <a class="nav" href="#forms-and-inputs">Forms & Inputs</a>
+          </li>
+          <li>
+            <a class="nav" href="#accessibility">Accessibility Fundamentals</a>
+          </li>
+          <li>
+            <a class="nav" href="#videos">Video's</a>
+          </li>
+          <li>
+            <a class="nav" href="#feedback">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+      <br />
+
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <h3><em>HTML Basics and Things to Know</em></h3>
+        <p>
+          <strong>HyperText Markup Language</strong> — <strong>HTML</strong> —
+          is the <em>foundational</em> language of the web. Every webpage you
+          have ever visited is built on it. Unlike programming languages that
+          execute logic, <strong>HTML</strong> is a <em>markup</em> language: it
+          describes the structure and meaning of content by wrapping it in tags.
+          A browser reads those tags and renders them as the headings,
+          paragraphs, images, forms, and links you see on screen.
+        </p>
+        <p>
+          Learning HTML is not simply about memorising tags. It is about
+          <em>understanding</em> why each element exists, what role it plays in
+          a document, and how browsers, search engines, and assistive
+          technologies interpret it. A page can be made to look correct while
+          being structurally broken — and those breakdowns surface as
+          <strong>accessibility failures</strong>,
+          <strong>SEO penalties</strong>, and
+          <strong>maintenance problems</strong> down the line.
+        </p>
+        <p>
+          This guide covers the core concepts every developer should have a firm
+          grip on: document structure, semantic markup, attributes and linking,
+          images and media, forms, and accessibility. Each section highlights
+          not just how something works, but the decisions and habits that
+          separate solid <strong>HTML</strong> from code that merely functions.
+        </p>
+      </section>
+      <br />
+      <hr />
+
+      <section id="document-structure">
+        <h2 class="centralized-titles">Document Structure</h2>
+        <figure>
+          <img
+            class="images"
+            width="650"
+            src="assets/images/Screenshot-(4).png"
+            alt="image of HTML basic elements like the html, head, title, body, h1 and h2 and p elements."
+          />
+          <figcaption>
+            <em>This image shows the basics of HTML Document Structure.</em>
+          </figcaption>
+        </figure>
+      </section>
+      <br />
+      <hr />
+
+      <section id="semantic-elements">
+        <figure>
+          <img
+            class="images"
+            width="650"
+            src="assets/images/1_l-47gdhkXSfdQqCnC6qbqQ.png"
+            alt="image showing the semantic elements used in semantic HTML like the header, nav, aside, footer, section, figure, main, article and p HTML elements"
+          />
+          <figcaption>
+            <em
+              >This image shows the distinction between Non-Semantic HTML and
+              Semantic HTML.</em
+            >
+          </figcaption>
+        </figure>
+      </section>
+      <br />
+      <hr />
+
+      <section id="attributes-and-links">
+        <h2>Attributes and Links</h2>
+        <p>
+          This small piece of code shows how a basic link should work using
+          HTML.
+        </p>
+        <br />
+        <pre>
+        &lt;!-- External link, opens in new tab --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;Google&lt;/a&gt;
+ 
+&lt;!-- Internal link (same site) --&gt;
+&lt;a href="/about.html"&gt;About&lt;/a&gt;
+ 
+&lt;!-- Anchor link (jumps to an id on the page) --&gt;
+&lt;a href="#contact"&gt;Go to contact section&lt;/a&gt;
+ 
+&lt;!-- Email link --&gt;
+&lt;a href="mailto:hello@example.com"&gt;Email me&lt;/a&gt;
+      </pre
+        >
+        <p>An example of links can be seen below.</p>
+        <a class="links" href="https://google.com" target="_blank">Google</a>
+        <br />
+        <br />
+        <a class="links" href="mailto:christian61841@gmail.com" target="_blank"
+          >Email me</a
+        >
+        <p>
+          Both links will send you to a new page because of the
+          <strong>target="_blank"</strong>
+          attribute, but they have different href attributes which means they
+          will send you to different pages.
+        </p>
+      </section>
+      <br />
+      <hr />
+
+      <section id="images-and-media">
+        <h2 class="centralized-titles">Images and Media</h2>
+
+        <figure>
+          <img
+            class="images"
+            width="500"
+            height="500"
+            src="assets/images/simpleimageofanorangecat.avif"
+            alt="image of an orange cat with its eyes closed with the sun shining on it"
+          />
+          <figcaption>
+            This is an image of an orange cat bathing in the sun.
+          </figcaption>
+        </figure>
+
+        <p>
+          Every <strong>&lt;img&gt;</strong> element must include an alt
+          attribute — this is non-negotiable. For informative images, the alt
+          text should describe the content and function of the image. For
+          decorative images that add no meaningful information, use an empty alt
+          attribute (alt="") so screen readers skip over it entirely. Missing
+          alt attributes fail accessibility audits and are a common source of
+          poor search engine indexing.
+        </p>
+
+        <p>
+          Image dimensions matter for performance and layout stability. Always
+          specify width and height attributes on
+          <strong>&lt;img&gt;</strong> elements so the browser can reserve the
+          correct space before the image loads, preventing cumulative layout
+          shift — a Core Web Vital metric directly tied to user experience and
+          SEO rankings. For responsive images, use CSS (max-width: 100%; height:
+          auto;) rather than omitting dimensions entirely.
+        </p>
+
+        <p>
+          For modern web work, the <strong>&lt;picture&gt;</strong> element and
+          the srcset attribute on <strong>&lt;img&gt;</strong> allow you to
+          serve different image formats or resolutions based on screen size and
+          device capability. Serving WebP to supporting browsers while falling
+          back to JPEG for older ones is a pattern every developer should be
+          comfortable with, as it significantly reduces page weight without any
+          visual quality loss for most users.
+        </p>
+      </section>
+      <br />
+      <hr />
+
+      <section id="forms-and-inputs">
+        <h2>Forms and Inputs</h2>
+        <p>
+          <strong>HTML inputs</strong> are the primary mechanism through which
+          users submit data. Every <em>input</em> must be associated with a
+          &lt;label&gt; — either by wrapping the input inside the label, or by
+          matching the label's for attribute to the input's id.
+          <em>Placeholder</em> text is not a substitute for a visible label; it
+          disappears on focus and provides no persistent context, making forms
+          harder to complete and inaccessible to many users.
+        </p>
+        <p>
+          Choosing the correct type attribute on &lt;input&gt; elements is more
+          important than many developers realise. Using
+          <strong>type="email"</strong>, <strong>type="tel"</strong>, or
+          <strong>type="number"</strong> triggers the appropriate keyboard on
+          mobile devices, invokes native browser validation, and signals intent
+          clearly to assistive technologies. Defaulting to
+          <strong>type="text"</strong> for everything is a missed opportunity
+          that degrades the mobile experience.
+        </p>
+        <p>
+          <strong>Form validation</strong>
+          should be layered: use HTML5 constraint attributes (required,
+          minlength, pattern) for immediate browser-level feedback, then
+          supplement with
+          <em>JavaScript</em> for more complex rules, and always validate
+          server-side as the authoritative check. Never rely solely on
+          client-side validation for security — any client-side constraint can
+          be bypassed. The autocomplete attribute is also worth setting
+          deliberately; it controls how browsers autofill fields and
+          significantly speeds up form completion for returning users.
+        </p>
+
+        <p class="small-note">
+          An example of a form can be seen below at the feedback section of the
+          webpage. Click <a class="btn" href="#form">here</a> to go there now.
+        </p>
+        <br />
+      </section>
+      <br />
+      <hr />
+
+      <section id="accessibility">
+        <h2>Accessibility Fundamentals</h2>
+        <p>
+          <strong>Accessibility</strong> is not a feature to be added at the end
+          — it is a quality dimension baked into correct HTML from the start.
+          The single most impactful habit is using the <em>right</em> HTML
+          element for the <em>right</em> job. A
+          <strong>&lt;button&gt;</strong> element is keyboard focusable, fires
+          on Enter and Space, and announces itself as a button to screen readers
+          automatically. A <strong>&lt;div&gt;</strong> styled to look like a
+          button does none of those things unless you manually re-implement
+          every behaviour — a common and unnecessary source of
+          <em>accessibility failures</em>.
+        </p>
+        <p></p>
+        <p></p>
+      </section>
+      <br />
+      <hr />
+
+      <section id="videos">
+        <h2>Reference Video</h2>
+        <p>
+          Below you can see a video where it teaches you the fundamentals of
+          HTML.
+        </p>
+        <div class="video-container">
+          <iframe
+            id="video"
+            src="https://www.youtube.com/embed/kUMe1FH4CHE?si=NuYFeA5u-3fWjHDs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <br />
+      <hr />
+
+      <section id="feedback">
+        <h2>Feedback</h2>
+        <div class="example-form" id="form">
+          <h3>Feedback Form <em>(example)</em></h3>
+          <form method="GET" action="">
+            <fieldset>
+              <legend>
+                <strong>How do you like this website so far? </strong
+                ><em>(required)</em>
+              </legend>
+              <label for="feedback">Choose an option:</label>
+              <select
+                id="feedback"
+                name="feedback"
+                type="text"
+                class="input-form"
+                required
+              >
+                <option value="">Please choose an option</option>
+                <option value="bad">Bad</option>
+                <option value="average">Average</option>
+                <option value="good">Good</option>
+                <option value="excellent">Excellent</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>
+                <strong
+                  >Would you recommend this website to someone else? </strong
+                ><em>(required)</em>
+              </legend>
+              <label for="yes"
+                ><input
+                  required
+                  type="radio"
+                  name="yes-or-no"
+                  value="yes"
+                  class="input-form"
+                />Yes</label
+              >
+              <label for="no"
+                ><input
+                  required
+                  type="radio"
+                  name="yes-or-no"
+                  value="no"
+                  class="input-form"
+                />No</label
+              >
+            </fieldset>
+            <fieldset>
+              <legend>
+                <strong>Any additional feedback you would like to add? </strong
+                ><em>(optional)</em>
+              </legend>
+              <textarea
+                name="additional-feedback"
+                id="additional-feedback"
+                class="additional-feedback"
+                rows="4"
+                cols="50"
+                placeholder="Your feedback here..."
+              ></textarea>
+            </fieldset>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <br />
+      <hr />
+
+      <p class="header-contactme">Contact Me On</p>
+      <div class="contactme-section">
+        <div class="github">
+          <a href="https://github.com/chris14-001" target="_blank"
+            ><img
+              class="github icons"
+              src="assets/images/github-svgrepo-com.svg"
+          /></a>
+        </div>
+        <div class="instagram">
+          <a href="https://www.instagram.com/lwk.chris019/" target="_blank"
+            ><img
+              class="icons"
+              src="assets/images/instagram-2-1-logo-svgrepo-com.svg"
+          /></a>
+        </div>
+        <div class="email">
+          <a href="mailto:christian61841@gmail.com" target="_blank"
+            ><img
+              class="email icons"
+              src="assets/images/google-gmail-svgrepo-com.svg"
+            />
+          </a>
+        </div>
+      </div>
+
+      <hr />
+      <footer>
+        <div class="disclaimer-big">
+          <span class="disclaimer">DISCLAIMER.</span>
+        </div>
+        <div class="disclaimer-message">
+          <span class="disclaimer-text"
+          >I <strong>do NOT</strong> own <em>any</em> rights to the content displayed, and they belong to
+          their respective owners.</span
+        >
+        </div>
+
+        <p class="creator">
+          This webpage was created by
+          <span class="name">Christian Zelealem Mammo.</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
